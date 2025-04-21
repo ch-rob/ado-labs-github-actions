@@ -1,0 +1,14 @@
+In Powershell...
+
+# From: https://github.com/ch-rob/ado-labs-github-actions
+# az logout
+az login --use-device-code --scope https://graph.microsoft.com/.default
+#az login --use-device-code --tenant da1aa744-f43d-46fd-8308-5a3f6b99452a
+$env:ARM_SUBSCRIPTION_ID = $(az account show --query id -o tsv)
+$env:TF_VAR_personal_access_token = "<your_pat>"
+
+
+In WSL...
+# From: https://github.com/ch-rob/ado-labs-github-actions
+export GITHUB_TOKEN=PAT_TOKEN_VALUE
+az login --use-device-code --tenant da1aa744-f43d-46fd-8308-5a3f6b99452a

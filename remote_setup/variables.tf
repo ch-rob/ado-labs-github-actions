@@ -4,12 +4,12 @@
 
 variable "location" {
   type    = string
-  default = "eastus"
+  default = "canadacentral"
 }
 
 variable "naming_prefix" {
   type    = string
-  default = "adolabs"
+  default = "githublab"
 }
 
 variable "github_repository" {
