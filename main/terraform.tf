@@ -5,14 +5,14 @@ terraform {
     required_providers {
         azurerm = {
             source = "hashicorp/azurerm"
-            version = "~> 3.0.0"
+            version = "~> 4.19"
         }
     }
     backend "azurerm" {
         resource_group_name  = "githublab-37853"
         storage_account_name = "githublab37853"
         container_name       = "terraform-state"        
-        key = "app.terraform.tfstate"
+        key                  = "app.terraform.tfstate"
     }
 }
 
@@ -22,5 +22,6 @@ terraform {
 ##################################################################################
 
 provider "azurerm" {
-  features {}
+    features {}
+    subscription_id      = "1ab5dc89-603c-4f45-bdd1-a4231369b400"
 }

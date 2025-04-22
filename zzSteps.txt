@@ -9,6 +9,11 @@ $env:TF_VAR_personal_access_token = "<your_pat>"
 
 
 In WSL...
+Ensure storage account key access...
+https://portal.azure.com/#@MngEnvMCAP878053.onmicrosoft.com/resource/subscriptions/1ab5dc89-603c-4f45-bdd1-a4231369b400/resourceGroups/githublab-37853/providers/Microsoft.Storage/storageAccounts/githublab37853/configuration
+
+
 # From: https://github.com/ch-rob/ado-labs-github-actions
 export GITHUB_TOKEN=PAT_TOKEN_VALUE
+# May need az logout
 az login --use-device-code --tenant da1aa744-f43d-46fd-8308-5a3f6b99452a
