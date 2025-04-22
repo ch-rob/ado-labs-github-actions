@@ -54,11 +54,35 @@ variable "resource_name_environment" {
   }
 }
 
+variable "address_space" {
+  type        = string
+  default     = "10.0.0.0/16"
+  description = "The address space that is used in the virtual network"
+}
+
+variable "subnets" {
+  type = map(object({
+    size                       = number
+    has_nat_gateway            = bool
+    has_network_security_group = bool
+  }))
+  description = "The subnets"
+}
+
+variable "tags" {
+  type        = map(string)
+  description = "A map of tags to add to all resources"
+}
+
 variable "resource_name_templates" {
   type        = map(string)
   description = "A map of resource names to use"
   default = {
     resource_group_name          = "rg-$${prefix}-$${workload}-$${environment}"
     log_analytics_workspace_name = "law-$${prefix}-$${workload}-$${environment}"
+    virtual_network_name         = "vnet-$${prefix}-$${workload}-$${environment}"
+    network_security_group_name  = "nsg-$${prefix}-$${workload}-$${environment}"
+    nat_gateway_name             = "nat-$${prefix}-$${workload}-$${environment}"
+    nat_gateway_public_ip_name   = "pip-nat-$${prefix}-$${workload}-$${environment}"    
   }
 }
