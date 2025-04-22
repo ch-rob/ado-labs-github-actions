@@ -17,3 +17,5 @@ https://portal.azure.com/#@MngEnvMCAP878053.onmicrosoft.com/resource/subscriptio
 export GITHUB_TOKEN=PAT_TOKEN_VALUE
 # May need az logout
 az login --use-device-code --tenant da1aa744-f43d-46fd-8308-5a3f6b99452a
+
+terraform force-unlock <GIUD>
