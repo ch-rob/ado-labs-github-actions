@@ -44,4 +44,5 @@ module "storage_account" {
   diagnostic_settings_storage_account = local.diagnostic_settings
   diagnostic_settings_blob            = local.diagnostic_settings
   tags                                = var.tags
+  shared_access_key_enabled           = true
 }
