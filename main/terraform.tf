@@ -7,6 +7,10 @@ terraform {
             source = "hashicorp/azurerm"
             version = "~> 4.19"
         }
+        azapi = {
+            source  = "Azure/azapi"
+            version = "~> 2.2"
+        }
     }
     backend "azurerm" {
         resource_group_name  = "githublab-37853"
