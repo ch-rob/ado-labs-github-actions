@@ -74,15 +74,29 @@ variable "tags" {
   description = "A map of tags to add to all resources"
 }
 
+variable "enable_encryption_at_host" {
+  type        = bool
+  description = "Enable encryption at host"
+  default     = false
+}
+
 variable "resource_name_templates" {
   type        = map(string)
   description = "A map of resource names to use"
   default = {
-    resource_group_name          = "rg-$${prefix}-$${workload}-$${environment}"
-    log_analytics_workspace_name = "law-$${prefix}-$${workload}-$${environment}"
-    virtual_network_name         = "vnet-$${prefix}-$${workload}-$${environment}"
-    network_security_group_name  = "nsg-$${prefix}-$${workload}-$${environment}"
-    nat_gateway_name             = "nat-$${prefix}-$${workload}-$${environment}"
-    nat_gateway_public_ip_name   = "pip-nat-$${prefix}-$${workload}-$${environment}"    
+    resource_group_name                 = "rg-$${prefix}-$${workload}-$${environment}"
+    log_analytics_workspace_name        = "law-$${prefix}-$${workload}-$${environment}"
+    virtual_network_name                = "vnet-$${prefix}-$${workload}-$${environment}"
+    network_security_group_name         = "nsg-$${prefix}-$${workload}-$${environment}"
+    nat_gateway_name                    = "nat-$${prefix}-$${workload}-$${environment}"
+    nat_gateway_public_ip_name          = "pip-nat-$${prefix}-$${workload}-$${environment}"    
+    key_vault_name                      = "kv$${prefix}$${workload}$${environment}"
+    storage_account_name                = "sa$${prefix_no_dash}$${workload}$${environment}"
+    user_assigned_managed_identity_name = "uami-$${prefix}-$${workload}-$${environment}"
+    virtual_machine_name                = "vm-$${prefix}-$${workload}-$${environment}"
+    network_interface_name              = "nic-$${prefix}-$${workload}-$${environment}"
+    bastion_host_public_ip_name         = "pip--$${prefix}bas-$${workload}-$${environment}"
+    bastion_host_name                   = "bas-$${prefix}-$${workload}-$${environment}"
+
   }
 }
