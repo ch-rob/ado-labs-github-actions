@@ -10,10 +10,6 @@ module "virtual_machine" {
   zone                       = "1"
   encryption_at_host_enabled = var.enable_encryption_at_host # Turned off by default in this demo as requires the Microsoft.Compute/EncryptionAtHost feature to be enabled on the subscription
 
-#  generated_secrets_key_vault_secret_config = {
-#    key_vault_resource_id = module.key_vault.resource_id
-#  }
-
   managed_identities = {
     system_assigned = true
   }
