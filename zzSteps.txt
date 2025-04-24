@@ -19,3 +19,4 @@ export GITHUB_TOKEN=PAT_TOKEN_VALUE
 az login --use-device-code --tenant da1aa744-f43d-46fd-8308-5a3f6b99452a
 
 terraform force-unlock <GIUD>
+terraform apply -auto-approve

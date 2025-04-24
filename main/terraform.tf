@@ -1,6 +1,3 @@
-##################################################################################
-# TERRAFORM CONFIG
-##################################################################################
 terraform {
     required_providers {
         azurerm = {
@@ -11,6 +8,10 @@ terraform {
             source  = "Azure/azapi"
             version = "~> 2.2"
         }
+        http = {
+            source  = "hashicorp/http"
+            version = "~> 3.4"
+        }
     }
     backend "azurerm" {
         resource_group_name  = "githublab-37853"
@@ -19,11 +20,6 @@ terraform {
         key                  = "app.terraform.tfstate"
     }
 }
-
-
-##################################################################################
-# PROVIDERS
-##################################################################################
 
 provider "azurerm" {
     features {}
