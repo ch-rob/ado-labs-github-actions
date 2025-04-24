@@ -95,8 +95,7 @@ variable "resource_name_templates" {
     user_assigned_managed_identity_name = "uami-$${prefix}-$${workload}-$${environment}"
     virtual_machine_name                = "vm-$${prefix}-$${workload}-$${environment}"
     network_interface_name              = "nic-$${prefix}-$${workload}-$${environment}"
-    bastion_host_public_ip_name         = "pip--$${prefix}bas-$${workload}-$${environment}"
-    bastion_host_name                   = "bas-$${prefix}-$${workload}-$${environment}"
-
   }
 }
+
+

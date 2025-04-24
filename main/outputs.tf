@@ -15,8 +15,6 @@ output "resource_ids" {
     user_assigned_managed_identity = module.user_assigned_managed_identity.resource_id
     virtual_machine                = module.virtual_machine.resource_id
     network_interface              = module.virtual_machine.network_interfaces["private"].id
-    bastion_host_public_ip         = module.bastion_host_public_ip.resource_id
-    bastion_host                   = module.bastion_host.resource_id    
     }
 }
 
