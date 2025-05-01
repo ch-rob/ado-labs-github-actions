@@ -72,7 +72,7 @@ variable "resource_name_templates" {
     network_security_group_name         = "nsg-$${prefix}-$${workload}-$${environment}"
     nat_gateway_name                    = "nat-$${prefix}-$${workload}-$${environment}"
     nat_gateway_public_ip_name          = "pip-nat-$${prefix}-$${workload}-$${environment}"    
-    key_vault_name                      = "kv$${prefix}$${workload}$${environment}"
+    key_vault_name                      = "keyv$${prefix}$${workload}$${environment}"
     storage_account_name                = "sa$${prefix_no_dash}$${workload}$${environment}"
     user_assigned_managed_identity_name = "uami-$${prefix}-$${workload}-$${environment}"
     virtual_machine_name                = "vm-$${prefix}-$${workload}-$${environment}"
